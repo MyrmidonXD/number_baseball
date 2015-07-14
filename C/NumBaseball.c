@@ -11,9 +11,10 @@ int main(int argc, char** argv)
 	int gamePlaying = 1;
 
 	srand(time(NULL));
+
+	printf("\n[C] Number Baseball\n\n");
 	while(gamePlaying)
 	{
-		// Magic Happens!
 		targetNum = pickRandNum();
 
 		gamePlaying = numBaseball(targetNum);
@@ -74,13 +75,9 @@ int numBaseball(int* targetNum)
 
 		/*
 		int c;
-		while((c = getchar()) != EOF)
-		{
-			printf("debug\n");
-		} // clear the stdin
+		while((c = getchar()) != '\n' && c != EOF) // clear the stdin
 		*/
 
-//		printf("debug2: input[4] is %c\n", input[4]);
 		if(input[4] != '\n') invalidInputFlag = 1;
 
 		for(i = 0; i < 4; i++)
@@ -124,7 +121,6 @@ int numBaseball(int* targetNum)
 
 		if(strike == 4)
 		{
-			// 맞았어
 			char restart;
 			printf("\nCongratulations! You guessed the right answer! The answer is %1d%1d%1d%1d.\n\n", 
 					targetNum[0], targetNum[1], targetNum[2], targetNum[3]);
@@ -135,11 +131,6 @@ int numBaseball(int* targetNum)
 			if(restart == 'Y' || restart == 'y') return 1;
 			else return 0;
 		}
-
-		else
-		{
-			// 틀렸어
-			printf("%d Strike(s), %d Ball(s)\n", strike, ball);
-		}
+		else printf("%d Strike(s), %d Ball(s)\n", strike, ball);
 	}
 }

@@ -12,10 +12,10 @@ def gen_rand_num():
     return num
 
 def num_baseball(target):
-    print "==============================================="
+    print "\n==============================================="
     print "Your input number should be a four-digit number"
     print "which has all different digits."
-    print "==============================================="
+    print "===============================================\n"
 
     while True:
         guess = raw_input("Please enter your guess. : ")
@@ -58,9 +58,9 @@ The answer is {0}{1}{2}{3}.\n".format(target[0], target[1], target[2], target[3]
         else:
             print "{s} Strike(s), {b} Ball(s)".format(s=strike, b=ball)
 
-
-
 playing = True
+
+print "\n[Python] Number Baseball"
 
 while playing:
     target_num = gen_rand_num()

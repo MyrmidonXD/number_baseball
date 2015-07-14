@@ -5,8 +5,9 @@ use std::io::*;
 use rand::Rng;
 
 fn main() {
-
     let mut playing = true;
+
+    println!("\n[Rust] 숫자 야구");
 
     while playing {
 
@@ -44,9 +45,7 @@ fn gen_rand_num() -> Vec<u32> {
 
 
 fn num_baseball(num: &Vec<u32>) -> bool {
-
-    println!("");
-    println!("============================================================");
+    println!("\n============================================================");
     println!("각 자리가 서로 다른 숫자로 이루어진 네 자리 수를 입력하세요!");
     println!("============================================================");
 
